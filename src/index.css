@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid gray;
+}
+
+@media (width > 600px) and (width <= 900px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width > 900px) and (width <= 1200px) {
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (width > 1200px) {
+  .cards-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
